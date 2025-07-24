@@ -1,0 +1,266 @@
+/* admin.css */
+
+/* ألوان جديدة حديثة */
+:root {
+   --primary-color: #22577A;
+  --secondary-color: #38A3A5;
+  --accent-color: #57CC99;
+  --light-color: #F7F9FC;
+  --dark-color: #1b1b1b;
+  --hover-color: #1c768f;
+  --warning-color: #fbbc04;
+  --danger-color: #ea4335;
+  --text-color: #202124;
+  --shadow-color: rgba(0, 0, 0, 0.12);
+}
+
+/* رأس الصفحة */
+.admin-header {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  border-radius: 0 0 12px 12px;
+  font-family: 'Tajawal', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+.admin-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  user-select: none;
+}
+
+/* زر عرض الموقع */
+.view-site {
+  color: white;
+  text-decoration: none;
+  background: var(--accent-color);
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(52, 168, 83, 0.4);
+}
+
+.view-site:hover {
+  background: #2ecc71;
+  box-shadow: 0 6px 14px rgba(46, 204, 113, 0.6);
+  text-decoration: none;
+}
+
+/* التخطيط الرئيسي */
+.admin-main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  padding: 2rem 3rem;
+  max-width: 1400px;
+  margin: 2rem auto 4rem;
+  background: var(--light-color);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  font-family: 'Tajawal', sans-serif;
+  min-height: 80vh;
+}
+
+/* للأجهزة الصغيرة */
+@media (max-width: 1024px) {
+  .admin-main {
+    grid-template-columns: 1fr;
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* القسم الخاص بالنماذج */
+.form-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px var(--shadow-color);
+  height: fit-content;
+  transition: box-shadow 0.3s ease;
+}
+
+.form-section:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.form-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* زر الإرسال */
+#submitBtn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.85rem 1.8rem;
+  border-radius: 30px;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(26, 115, 232, 0.4);
+  transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+#submitBtn:hover {
+  background: var(--secondary-color);
+  transform: scale(1.05);
+  box-shadow: 0 7px 20px rgba(66, 133, 244, 0.6);
+}
+
+/* قسم الكتب */
+.books-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px var(--shadow-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.books-section:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* صندوق البحث */
+.search-container {
+  display: flex;
+  margin-bottom: 2rem;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.search-container input {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-container input:focus {
+  box-shadow: inset 0 0 10px var(--primary-color);
+}
+
+.search-container button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0 1.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background: var(--secondary-color);
+}
+
+/* قائمة الكتب */
+.books-list {
+  display: grid;
+  gap: 1.2rem;
+}
+
+/* عنصر الكتاب */
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  background: #f7f9fc;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.book-item:hover {
+  background-color: #e3f2fd;
+  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
+}
+
+/* أزرار الإجراءات */
+.book-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.book-actions button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-actions button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+}
+
+/* أزرار التعديل والحذف بألوان متناسقة */
+.edit-btn {
+  background: var(--warning-color);
+  color: #4a3c00;
+  box-shadow: 0 3px 8px rgba(251, 188, 4, 0.4);
+}
+
+.edit-btn:hover {
+  background: #f9a825;
+  color: #3e2f00;
+  box-shadow: 0 5px 15px rgba(249, 168, 37, 0.6);
+}
+
+.delete-btn {
+  background: var(--danger-color);
+  box-shadow: 0 3px 8px rgba(234, 67, 53, 0.4);
+}
+
+.delete-btn:hover {
+  background: #c62828;
+  box-shadow: 0 5px 15px rgba(198, 40, 40, 0.6);
+}
+
+/* تجاوب للهواتف */
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .admin-main {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .book-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .book-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

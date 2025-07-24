@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم | مكتبة مدرسة الحياة</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/ css/admin.css">
+</head>
+<body>
+  <header class="admin-header">
+    <h1><i class="fas fa-cog"></i> لوحة التحكم</h1>
+    <a href="index.html" class="view-site"><i class="fas fa-external-link-alt"></i> عرض الموقع</a>
+  </header>
+
+  <main class="admin-main">
+    <section class="form-section">
+      <h2><i class="fas fa-book-medical"></i> إدارة الكتب</h2>
+      <form id="bookForm">
+        <input type="hidden" id="bookId">
+        <div class="form-group">
+          <label for="title">اسم الكتاب</label>
+          <input type="text" id="title" required>
+        </div>
+        <div class="form-group">
+          <label for="author">المؤلف</label>
+          <input type="text" id="author" required>
+        </div>
+        <div class="form-group">
+          <label for="number">رقم الكتاب</label>
+          <input type="text" id="number" required>
+        </div>
+        <div class="form-group">
+<label for="category">التصنيف</label>
+<select id="category" required>
+  <option value="">اختر تصنيفاً</option>
+  <option value="علوم القرآن الكريم">علوم القرآن</option>
+  <option value="الحديث">الحديث النبوي</option>
+  <option value="العقيدة">العقيدة</option>
+  <option value="الفقه">الفقه</option>
+  <option value="السيرة النبوية">السيرة النبوية</option>
+  <option value="السير والتراجم">السير والتراجم</option>
+  <option value="التاريخ والجغرافيا">التاريخ والجغرافيا</option>
+  <option value="النحو والصرف">النحو والصرف</option>
+  <option value="البلاغة">البلاغة</option>
+  <option value="الأدب والشعر العربي">الأدب والشعر</option>
+  <option value="التنمية البشرية">التنمية البشرية</option>
+  <option value="العلوم الاجتماعية والمدنية">العلوم الاجتماعية</option>
+  <option value="التكنولوجيا وعلوم الحاسوب">علوم الحاسوب</option>
+  <option value="علوم اللغة الإنجليزية">اللغة الإنجليزية</option>
+</select>
+
+
+        </div>
+
+        <div class="form-group">
+          <label for="number">عدد النسخ</label>
+          <input type="text" id="number" required>
+        </div>
+
+
+        <button type="submit" id="submitBtn"><i class="fas fa-save"></i> حفظ</button>
+      </form>
+    </section>
+
+    <section class="books-section">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="ابحث عن كتاب...">
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+      </div>
+      
+      <div class="books-list" id="booksList">
+        <!-- الكتب ستظهر هنا -->
+      </div>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

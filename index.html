@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مكتبة مدرسة الحياة</title>
+
+  <!-- أيقونات وخطوط -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+  <!-- ملف التنسيق الفعلي -->
+  <link rel="stylesheet" href="assets/ css/public.css">  <!-- ✅ هذا فقط يكفي -->
+ 
+</head>
+
+<body>
+  <header class="public-header">
+    <div class="header-content">
+      <h1><i class="fas fa-book-open"></i> مكتبة مدرسة الحياة</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="ابحث عن كتاب...">
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="categories">
+  <button class="category-btn active" data-category="all">الكل</button>
+  <button class="category-btn" data-category="علوم القرآن الكريم">علوم القرآن</button>
+  <button class="category-btn" data-category="الحديث">الحديث النبوي</button>
+  <button class="category-btn" data-category="العقيدة">العقيدة</button>
+  <button class="category-btn" data-category="الفقه">الفقه</button>
+  <button class="category-btn" data-category="السيرة النبوية">السيرة النبوية</button>
+  <button class="category-btn" data-category="السير والتراجم">السير والتراجم</button>
+  <button class="category-btn" data-category="التاريخ والجغرافيا">التاريخ والجغرافيا</button>
+  <button class="category-btn" data-category="النحو والصرف">النحو والصرف</button>
+  <button class="category-btn" data-category="البلاغة">البلاغة</button>
+  <button class="category-btn" data-category="الأدب والشعر العربي">الأدب والشعر</button>
+  <button class="category-btn" data-category="التنمية البشرية">التنمية البشرية</button>
+  <button class="category-btn" data-category="العلوم الاجتماعية والمدنية">العلوم الاجتماعية</button>
+  <button class="category-btn" data-category="التكنولوجيا وعلوم الحاسوب">علوم الحاسوب</button>
+  <button class="category-btn" data-category="علوم اللغة الإنجليزية">اللغة الإنجليزية</button>
+</nav>
+  <main class="public-main">
+    <div class="books-container" id="booksList">
+      <div class="empty-state">
+        <i class="fas fa-spinner fa-spin"></i>
+        <p>جاري تحميل الكتب...</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="public-footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p><i class="fas fa-copyright"></i> 2025 مكتبة مدرسة الحياة</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
