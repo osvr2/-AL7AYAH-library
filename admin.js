@@ -1,9 +1,9 @@
 require('dotenv').config(); 
 // تكوين GitHub
-const GITHUB_USER = process.env.GITHUB_USER || 'your_username'; // أفضل تخزينها في .env أيضًا
+const GITHUB_USER = process.env.GITHUB_USER || 'your_username'; 
 const REPO = process.env.REPO_NAME || 'your_repo'; 
 const DATA_FILE = 'data/books.json';
-const TOKEN = process.env.GITHUB_TOKEN; // يتم قراءته من .env
+const TOKEN = process.env.GITHUB_TOKEN; 
 
 // عناصر DOM
 const bookForm = document.getElementById('bookForm');
