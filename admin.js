@@ -160,36 +160,41 @@ document.addEventListener('DOMContentLoaded', async () => {
   bookForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    const book = {
-      id: editingBookId || Date.now().toString(),
-      title: document.getElementById('title').value,
-      author: document.getElementById('author').value,
-      bookCode: document.getElementById('bookCode').value,
-      copies: document.getElementById('copies').value,
-      category: document.getElementById('category').value,
-      cover: '📘'
-    };
-    
-    const currentBooks = await fetchBooks();
-    let updatedBooks;
-    
-    if (editingBookId) {
-      // تحديث كتاب موجود
-      updatedBooks = currentBooks.map(b => b.id === editingBookId ? book : b);
-    } else {
-      // إضافة كتاب جديد
-      updatedBooks = [...currentBooks, book];
-    }
-    
-    const success = await saveBooks(updatedBooks);
-    
-    if (success) {
-      bookForm.reset();
-      editingBookId = null;
-      submitBtn.innerHTML = '<i class="fas fa-save"></i> حفظ';
-      
-      const books = await fetchBooks();
-      renderAdminBooks(books);
-    }
-  });
-});
+   document.addEventListener('DOMContentLoaded', async () => {
+  const bookForm = document.getElementById('book-form');
+  const submitBtn = document.getElementById('submit-btn');
+
+  bookForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    document.addEventListener('DOMContentLoaded', async () => {
+  const bookForm = document.getElementById('book-form');
+  const submitBtn = document.getElementById('submit-btn');
+
+  bookForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+   document.addEventListener('DOMContentLoaded', async () => {
+  const bookForm = document.getElementById('book-form');
+  const submitBtn = document.getElementById('submit-btn');
+
+  bookForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const bookForm = document.getElementById('book-form');
+  const submitBtn = document.getElementById('submit-btn');
+
+  bookForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+   document.addEventListener('DOMContentLoaded', async () => {
+  const bookForm = document.getElementById('book-form');
+  const submitBtn = document.getElementById('submit-btn');
+
+  bookForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+
+  
