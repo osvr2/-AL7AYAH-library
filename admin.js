@@ -1,9 +1,9 @@
-require('dotenv').config(); 
-// تكوين GitHub
-const GITHUB_USER = process.env.GITHUB_USER || 'your_username'; 
-const REPO = process.env.REPO_NAME || 'your_repo'; 
+const GITHUB_USER = 'osvr2';
+const REPO = '-AL7AYA-library';
 const DATA_FILE = 'data/books.json';
-const TOKEN = process.env.GITHUB_TOKEN; 
+const TOKEN = process.env.GITHUB_TOKEN;
+
+
 
 // عناصر DOM
 const bookForm = document.getElementById('bookForm');
@@ -164,7 +164,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       id: editingBookId || Date.now().toString(),
       title: document.getElementById('title').value,
       author: document.getElementById('author').value,
-      number: document.getElementById('number').value,
+      bookCode: document.getElementById('bookCode').value,
+      copies: document.getElementById('copies').value,
       category: document.getElementById('category').value,
       cover: '📘'
     };
